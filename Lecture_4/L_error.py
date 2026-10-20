@@ -1,5 +1,22 @@
-try: 
-    x = int(input("Whats x: "))
+def main():
+    x = get_int("Whats x: ")
     print(f"x is {x}")
-except ValueError:
-    print("Please enter a number")
+
+
+def get_int(prompt):
+    while True:
+        try: 
+            x = int(input(prompt))
+        except ValueError:
+            print("invalid input")
+        else:
+            break
+    return x
+main()
+
+
+
+
+
+
+
